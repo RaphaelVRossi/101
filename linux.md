@@ -9,18 +9,18 @@
 ls
 pasta1 pasta2 arquivo1.txt image.jpg
 
-ls -l
+ls -l # mostra os arquivos em lista
 pasta1
 pasta2
 arquivo1.txt
 image.jpg
 
-ls -la
+ls -la # lista todos os arquivos + ocultos
 .arquivo-oculto
 pasta1
 pasta2
 
-ls -lrta # o ultimo arquivo sempre é o mais atual
+ls -lrta # o último arquivo sempre é o mais atual
 .arquivo-oculto
 pasta1
 pasta2
@@ -32,6 +32,10 @@ pasta2
 cd pasta1
 ls
 arquivo2.txt
+
+cd .. # volta para a última pasta
+cd / # vai para a raiz do sistema
+cd ~ # vai para a home do seu usuário
 ```
 
 `pwd`: Exibe o diretório de trabalho atual.
@@ -75,12 +79,41 @@ mv nome_antigo.txt nome_novo.txt
 mv pasta_antiga pasta_nova
 ```
 
+## Comandos Úteis
+`cat`: Exibe o conteúdo de um arquivo.
+
+```shell
+cat arquivo.txt
+esse é o conteudo do arquivo
+```
+
+`touch`: Cria um arquivo vazio.
+
+```shell
+touch arquivo.txt
+ls
+arquivo.txt
+```
+
+`echo`: Exibe texto na tela.
+
+```shell
+echo 'teste'
+teste
+
+echo 'conteudo do arquivo' > arquivo.txt # um > redireciona a saida do comando para algum lugar, no caso um arquivo
+cat arquivo.txt
+conteudo do arquivo
+
+echo 'mais conteudo' >> arquivo.txt # dois > redireciona a saida, mas adicionando ao final do arquivo
+cat arquivo.txt
+conteudo do arquivo
+mais conteudo
+```
 
 
 Para ver depois: 
-`cat`: Exibe o conteúdo de um arquivo.
-`touch`: Cria um arquivo vazio.
-`echo`: Exibe texto na tela.
+
 `man`: Exibe o manual de um comando.
 `sudo`: Executa um comando com privilégios de superusuário.
 `clear`: Limpa a tela do terminal.
